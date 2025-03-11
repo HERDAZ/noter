@@ -223,7 +223,12 @@ case $2 in
 	doing)
 		#TODO add an arg to suppress any output
 		#TODO add an arg to delete the date when using journal doing
-		#TODO add check for the existence of $DOINGDIR
+
+		if [ -z $DOINGDIR ]; then
+			echo "Empty DOINGDIR, exiting"
+			exit 1
+		fi
+
 		if [[ $3 =~ ^[0-9]+$ ]]; then
 
 			let number=$(wc $NOTERDIR/$file.txt -l | grep -P "^\d+" -o)-$3
