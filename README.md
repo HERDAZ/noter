@@ -9,4 +9,4 @@ $noter help
 to know more. Feel free to open an issue if you are having problem with it :)
 
 ## Participating
-Their are some things that I had the idea of, but haven't coded, writen in TODOs around the file. Feel free to make pull request if you want to participate.
+There are some things that I had the idea of, but haven't coded, writen in TODOs around the file. Feel free to make pull request if you want to participate.
