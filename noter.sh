@@ -87,7 +87,7 @@ case $2 in
 			echo "Empty entry $3"
 			exit 1
 		elif [ $# -gt 3 ]; then
-			echo "Too many arguments ($#), you maybe forgot to use double-quotes (\")"
+			echo "Too many arguments ($#) for \"noter $1 $2\", you maybe forgot to use double-quotes around the text"
 			exit 1
 		fi
 
@@ -179,7 +179,7 @@ case $2 in
 			let arg=$arg+1
 		done
 
-		grep $3 $NOTERDIR/$file.txt $context --color # TODO pipe it with sed or awk to correct the number
+		grep "$3" $NOTERDIR/$file.txt $context --color # TODO pipe it with sed or awk to correct the number
 		exit 0
 	;;
 
@@ -220,7 +220,7 @@ case $2 in
 
 	;;
 
-	doing)
+	doing)	# meant to be integrated with a wrapper around 'echo "text" > $DOINGDIR/doing.txt', where doing.txt will be read by i3status
 		#TODO add an arg to suppress any output
 		#TODO add an arg to delete the date when using journal doing
 
