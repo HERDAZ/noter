@@ -234,6 +234,7 @@ case $2 in
 			let number=$(wc $NOTERDIR/$file.txt -l | grep -P "^\d+" -o)-$3
 
 			line=$(sed -e "$number p;d" $NOTERDIR/$file.txt)
+			line=$(echo $line | grep -o -P "(?<=\d{2}/\d{2}/\d{2} : ).+")
 			echo "$line"
 			$DOINGDIR/doing.sh "$line"
 			exit 1
