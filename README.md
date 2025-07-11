@@ -2,9 +2,8 @@
 Small bash program that (badly) manages journals, with a little integration with 'doing', an even smaller wrapper around 'echo TEXT > file'.
 
 ## Install
-Place the script in a new empty directory, that is pointed to by ```$NOTERDIR```, and create an alias to call it from anywhere, (having it in a new directory prevents poluting /usr/bin or other commonplace for installed programs, as the journals file are kept in the same directory (NOTERDIR))
 
-After downloading it, place it in a new empty directory. Then, you need to set-up an environement variable to point to this directory (no '/' after the directory name) :
+After downloading the script, place it in a new empty directory. Then, you need to set-up an environement variable to point to this directory (no '/' after the directory name) :
 ```
 export NOTERDIR="<whereYourDirectoryIs>/<directoryName>"
 ```
